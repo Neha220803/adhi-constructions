@@ -10,87 +10,109 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
     <title>Aadhi Constructions</title>
     <!-- Import GSAP and ScrollTrigger from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
+    <!-- Import Lenis for smooth scrolling -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
   </head>
   <body>
     <div class="header-container">
       <header>
-        <div class="header-content">AADHI Constructions</div>
+        <div class="header-content">AADHI CONSTRUCTIONS</div>
       </header>
     </div>
 
     <section>
-      <div class="container text-center">
-        <h2>YOUR ONE STEP SOLUTION FOR ALL CONSTRUCTION NEEDS</h2>
-        <div class="row bg-primar">
-          <div class="col-lg-7 col-12">
-            <img
-              src="./assets/images/solu-1.jpg"
-              class="img-fluid solu-img mb-4"
-              alt="img"
-              id="sol-img1"
-            />
-            <img
-              src="./assets/images/solu-2.jpg"
-              class="img-fluid solu-img mb-4"
-              alt="img"
-              id="sol-img2"
-            />
+      <div class="container">
+        <div class="row solution-container">
+          <div class="col-lg-7 col-md-7 col-12 bg-succes">
+            <div class="content-wrapper bg-primar h-100">
+              <h2 class="section-heading w-75">
+                "YOUR ONE STEP SOLUTION FOR ALL CONSTRUCTION NEEDS"
+              </h2>
+              <div class="intro-text">
+                Welcome to ADHI Construction, your trusted partner in building
+                excellence. As a premier general contracting and construction
+                management firm based in New York, we specialize in delivering
+                high-quality projects across a diverse range of sectors.
+              </div>
+              <img
+                src="./assets/images/solu-2.jpg"
+                class="img-fluid solu-img"
+                alt="Construction project"
+                id="sol-img2"
+              />
+            </div>
           </div>
-          <div class="col-md-5 col-12">
-            <img
-              src="./assets/images/solu-3.jpg"
-              class="img-fluid solu-img h-md-100"
-              alt="img"
-              id="sol-img3"
-            />
+          <div class="col-lg-5 col-md-5 col-12">
+            <div class="right-img-container">
+              <img
+                src="./assets/images/solu-3.png"
+                class="img-fluid solu-img"
+                alt="Construction team"
+                id="sol-img3"
+              />
+            </div>
           </div>
-        </div>
-        <div class="row">
-          Welcome to ADHI Construction, your trusted partner in building
-          excellence. As a premier general contracting and construction
-          management firm based in New York, we specialize in delivering
-          high-quality projects across a diverse range of sectors.
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="bg-primar">
       <div class="container">
         <div class="row">
-          <div class="section-heading">
-            WHO WE ARE - Founded with a commitment TO excellence, ADHI
-            Construction brings a WEALTH OF
+          <div class="section-heading mb-5 pb-2">
+            WHO WE ARE -
             <span class="section-heading-active"
-              >experienceD and a dedicated team</span
+              >Founded with a commitment</span
             >
+            TO excellence, ADHI Construction brings a WEALTH OF
+            <span class="section-heading-active"></span>
+              experienceD and a dedicated team
+            </span>
             of PROFESSIONALS TO EVERY project. Our expertise SPANS
-            <span class="section-heading-active">
-              COMMERCIAL, residential, healthcare,</span
-            >
-            institutional, and retail sectors, ensuring that we meet the UNIQUE
+            <span class="section-heading-active"
+              >COMMERCIAL, residential, healthcare, institutional, and retail </span
+            > sectors, ensuring that we meet the UNIQUE
             <span class="section-heading-active"> NEEDS OF each client.</span>
           </div>
         </div>
       </div>
-      <div class="row p-0 m-0 bg-primary">
-        <div class="col"><button>Learn more</button></div>
-        <div class="col">
+      <div class="row p-0 m-0 bg-primar">
+        <div
+          class="col-md-3 col-12 d-flex justify-content-md-end align-items-end bg-dar"
+        >
+          <button class="common-button d-flex px-2">
+            <i class="fa fa-arrow-right"></i>
+            <div>Learn more</div>
+          </button>
+        </div>
+        <div class="col-md-5 col-6 d-flex justify-content-end align-items-end">
           <img
             src="./assets/images/about-1.jpg"
-            class="img-fluid about-img mb-4"
+            class="img-fluid about-img w-100 p-0 m-0"
             alt="img"
             id="abour-img1"
           />
         </div>
-        <div class="col">
+        <div
+          class="col-md-4 col-6 bg-dar d-flex justify-content-end align-items-end p-0"
+        >
           <img
             src="./assets/images/about-2.jpg"
-            class="img-fluid about-img mb-4"
+            class="img-fluid about-img w-100 ms-md-4"
             alt="img"
             id="about-img1"
           />
@@ -98,11 +120,12 @@
       </div>
     </section>
 
-    <!-- External JavaScript file -->
     <!-- External JavaScript libraries first -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.25/bundled/lenis.min.js"></script>
 
     <!-- Then your custom JavaScript -->
     <script src="./script.js"></script>

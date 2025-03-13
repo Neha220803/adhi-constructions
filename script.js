@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
     ease: "none",
   });
 
-  // Select the elements for the image animations
+  // Select the elements for the image animations - Fixed selectors
   const imageSection = document.querySelector("section");
-  const firstImage = imageSection.querySelector(".col-lg-7 img:first-child");
-  const secondImage = imageSection.querySelector(".col-lg-7 img:last-child");
-  const rightImage = imageSection.querySelector(".col-lg-5 img");
+  const firstImage = document.getElementById("sol-img1");
+  const secondImage = document.getElementById("sol-img2");
+  const rightImage = document.getElementById("sol-img3"); // Fixed selector
 
   // Set initial states
   gsap.set(firstImage, {
@@ -80,4 +80,51 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     },
   });
+
+  // Fix the section heading animation
+  const splitTypes = document.querySelectorAll(".section-heading");
+
+  splitTypes.forEach((char) => {
+    const text = new SplitType(char, { types: "chars" });
+
+    gsap.from(text.chars, {
+      scrollTrigger: {
+        trigger: char,
+        start: "top 80%",
+        end: "top 20%",
+        scrub: true,
+        markers: false,
+      },
+      scaleY: 0,
+      y: -20,
+      transformOrigin: "top",
+      // opacity: 0,
+      stagger: 0.02,
+    });
+  });
+
+  // About section images animation
+  const aboutImg1 = document.getElementById("about-img1");
+  const aboutImg2 = document.getElementById("abour-img1"); // Note: there's a typo in the original ID
+
+  if (aboutImg1 && aboutImg2) {
+    gsap.set([aboutImg1, aboutImg2], {
+      opacity: 0,
+      y: 100,
+    });
+
+    ScrollTrigger.create({
+      trigger: ".bg-primar",
+      start: "top 70%",
+      onEnter: () => {
+        gsap.to([aboutImg1, aboutImg2], {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.3,
+          ease: "power2.out",
+        });
+      },
+    });
+  }
 });
