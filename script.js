@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
         trigger: char,
         start: "top 80%",
         end: "top 20%",
-        // scrub: true,
+        scrub: true,
         markers: false,
       },
       scaleY: 0,
