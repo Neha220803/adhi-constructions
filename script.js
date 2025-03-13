@@ -125,4 +125,17 @@ document.addEventListener("DOMContentLoaded", function () {
       markers: false, // Set to true during development to see trigger points
     },
   });
+
+  /*Footer Section*/
+  gsap.set(".footer-container", { yPercent: -50 });
+  const uncover = gsap.timeline({ paused: true });
+  uncover.to(".footer-container", { yPercent: 0, ease: "none" });
+
+  ScrollTrigger.create({
+    trigger: "footer", // Changed from ".conclusion" to "footer"
+    start: "top bottom",
+    end: "+=75%",
+    animation: uncover,
+    scrub: true,
+  });
 });
