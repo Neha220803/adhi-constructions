@@ -1,31 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <title>Aadhi Constructions</title>
     <!-- Import GSAP and ScrollTrigger from CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-</head>
-<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
+  </head>
+  <body>
     <div class="header-container">
-        <header>
-            <div class="header-content">
-                AADHI Constructions
-            </div>
-        </header>
+      <header>
+        <div class="header-content">AADHI Constructions</div>
+      </header>
     </div>
-    
+
     <section>
-        <div class="container">
-            <h2>Welcome to AADHI Constructions</h2>
-            <!-- Add more content here -->
+      <div class="container text-center">
+        <h2>YOUR ONE STEP SOLUTION FOR ALL CONSTRUCTION NEEDS</h2>
+        <div class="row bg-primar">
+          <div class="col-lg-7 col-12">
+            <img
+              src="./assets/images/solu-1.jpg"
+              class="img-fluid solu-img mb-4"
+              alt="img"
+              id="sol-img1"
+            />
+            <img
+              src="./assets/images/solu-2.jpg"
+              class="img-fluid solu-img mb-4"
+              alt="img"
+              id="sol-img2"
+            />
+          </div>
+          <div class="col-md-5 col-12">
+            <img
+              src="./assets/images/solu-3.jpg"
+              class="img-fluid solu-img h-md-100"
+              alt="img"
+              id="sol-img3"
+            />
+          </div>
         </div>
+        <div class="row">
+          Welcome to ADHI Construction, your trusted partner in building
+          excellence. As a premier general contracting and construction
+          management firm based in New York, we specialize in delivering
+          high-quality projects across a diverse range of sectors.
+        </div>
+      </div>
     </section>
-    
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="section-heading">
+            WHO WE ARE - Founded with a commitment TO excellence, ADHI
+            Construction brings a WEALTH OF
+            <span class="section-heading-active"
+              >experienceD and a dedicated team</span
+            >
+            of PROFESSIONALS TO EVERY project. Our expertise SPANS
+            <span class="section-heading-active">
+              COMMERCIAL, residential, healthcare,</span
+            >
+            institutional, and retail sectors, ensuring that we meet the UNIQUE
+            <span class="section-heading-active"> NEEDS OF each client.</span>
+          </div>
+        </div>
+      </div>
+      <div class="row p-0 m-0 bg-primary">
+        <div class="col"><button>Learn more</button></div>
+        <div class="col">
+          <img
+            src="./assets/images/about-1.jpg"
+            class="img-fluid about-img mb-4"
+            alt="img"
+            id="abour-img1"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="./assets/images/about-2.jpg"
+            class="img-fluid about-img mb-4"
+            alt="img"
+            id="about-img1"
+          />
+        </div>
+      </div>
+    </section>
+
     <!-- External JavaScript file -->
+    <!-- External JavaScript libraries first -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
+
+    <!-- Then your custom JavaScript -->
     <script src="./script.js"></script>
-</body>
+
+    <!-- Bootstrap should go last -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
