@@ -2,25 +2,22 @@
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Create a timeline for the header animation
+  // Set the initial state of the header background before any animations
   const headerTimeline = gsap.timeline({
     scrollTrigger: {
       trigger: ".header-container",
-      start: "top top", // when the top of the header hits the top of the viewport
-      end: "+=100%", // animation lasts for the height of the viewport
-      pin: true, // pin the header in place during the animation
-      scrub: true, // smooth animation that ties to the scrollbar position
-      pinSpacing: true, // creates space in the document for the pinned element
-      markers: false, // set to true during development to see trigger points
+      start: "top top",
+      end: "+=100%",
+      pin: true,
+      scrub: true,
+      pinSpacing: true,
+      markers: false,
     },
   });
 
-  // Add the zoom animation to the timeline
-  const isMobile = window.innerWidth < 768;
-
-  // Add the zoom animation to the timeline with responsive values
-  headerTimeline.to("header", {
-    backgroundSize: isMobile ? "130%" : "150%", // Smaller zoom for mobile
+  // Now we can easily target the background div
+  headerTimeline.to(".header-bg", {
+    scale: 1.5,
     duration: 1,
     ease: "none",
   });
