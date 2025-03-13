@@ -16,8 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Add the zoom animation to the timeline
+  const isMobile = window.innerWidth < 768;
+
+  // Add the zoom animation to the timeline with responsive values
   headerTimeline.to("header", {
-    backgroundSize: "150%", // Zoom level (adjust as needed)
+    backgroundSize: isMobile ? "130%" : "150%", // Smaller zoom for mobile
     duration: 1,
     ease: "none",
   });
