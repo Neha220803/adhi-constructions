@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
       scaleY: 0,
       y: -20,
       transformOrigin: "top",
-      duration: 0.4,
+      duration: 0.2,
       // opacity: 0,
       stagger: 0.009,
     });
