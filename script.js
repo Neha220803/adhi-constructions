@@ -92,39 +92,37 @@ document.addEventListener("DOMContentLoaded", function () {
         trigger: char,
         start: "top 80%",
         end: "top 20%",
-        scrub: true,
+        // scrub: true,
         markers: false,
       },
       scaleY: 0,
       y: -20,
       transformOrigin: "top",
+      duration: 0.4,
       // opacity: 0,
-      stagger: 0.02,
+      stagger: 0.009,
     });
   });
 
   // About section images animation
-  const aboutImg1 = document.getElementById("about-img1");
-  const aboutImg2 = document.getElementById("abour-img1"); // Note: there's a typo in the original ID
+  gsap.set(".who-are-we-bottom-container", {
+    x: -100,
+    opacity: 0,
+  });
 
-  if (aboutImg1 && aboutImg2) {
-    gsap.set([aboutImg1, aboutImg2], {
-      opacity: 0,
-      y: 100,
-    });
-
-    ScrollTrigger.create({
-      trigger: ".bg-primar",
-      start: "top 70%",
-      onEnter: () => {
-        gsap.to([aboutImg1, aboutImg2], {
-          opacity: 1,
-          y: 0,
-          duration: 1,
-          stagger: 0.3,
-          ease: "power2.out",
-        });
-      },
-    });
-  }
+  // Create the animation with scroll trigger
+  gsap.to(".who-are-we-bottom-container", {
+    duration: 1.2,
+    x: 0,
+    opacity: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: ".who-are-we-bottom-container",
+      start: "top bottom-=50", // Animation starts when the top of the element is 50px from the bottom of viewport
+      end: "bottom center", // End of animation when bottom of element reaches center of viewport
+      toggleActions: "play none none reverse", // Play on enter, reverse on exit
+      once: false, // Animation will play every time element enters viewport
+      markers: false, // Set to true during development to see trigger points
+    },
+  });
 });
