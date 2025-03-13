@@ -190,6 +190,7 @@ section {
     background-position: center; /* Changed from bottom to center */
     background-size: 100%; /* Ensure image covers the header area */
     align-items: center; /* Center vertically */
+    height: 100vh !important;
   }
 
   .header-content {
