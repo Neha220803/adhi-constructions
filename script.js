@@ -81,26 +81,25 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
-  // Fix the section heading animation
+  //  section heading animation
   const splitTypes = document.querySelectorAll(".section-heading");
 
-  splitTypes.forEach((char) => {
-    const text = new SplitType(char, { types: "chars" });
+  splitTypes.forEach((element) => {
+    // Create a lines animation similar to the CodePen example
+    const text = new SplitType(element, { types: "lines" });
 
-    gsap.from(text.chars, {
+    gsap.from(text.lines, {
       scrollTrigger: {
-        trigger: char,
+        trigger: element,
         start: "top 80%",
         end: "top 20%",
-        // scrub: true,
         markers: false,
       },
-      scaleY: 0,
-      y: -20,
-      transformOrigin: "top",
-      duration: 0.2,
-      // opacity: 0,
-      stagger: 0.009,
+      duration: 2,
+      opacity: 0,
+      x: -100,
+      stagger: 0.1,
+      ease: "expo.out",
     });
   });
 
