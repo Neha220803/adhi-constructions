@@ -137,4 +137,54 @@ document.addEventListener("DOMContentLoaded", function () {
     animation: uncover,
     scrub: true,
   });
+
+  const inSlideNextArrow = document.querySelector(
+    "#main-slide .nav-arrow-in-col"
+  );
+  const inSlidePrevArrow = document.querySelector(
+    "#right-slide .nav-arrow-in-col"
+  );
+  const wrapper = document.querySelector(".carousel__wrapper");
+
+  let isAtRightSlide = false;
+
+  // Function to move to right slide
+  function moveToRightSlide() {
+    if (!isAtRightSlide) {
+      gsap.to(wrapper, {
+        duration: 0.6,
+        x: "-50%",
+        ease: "power2.out",
+        force3D: true,
+        onComplete: function () {
+          isAtRightSlide = true;
+        },
+      });
+    }
+  }
+
+  // Function to move back to main slide
+  function moveToMainSlide() {
+    if (isAtRightSlide) {
+      gsap.to(wrapper, {
+        duration: 0.6,
+        x: "0%",
+        ease: "power2.out",
+        force3D: true,
+        onComplete: function () {
+          isAtRightSlide = false;
+        },
+      });
+    }
+  }
+
+  // In-slide next arrow moves to right slide
+  if (inSlideNextArrow) {
+    inSlideNextArrow.addEventListener("click", moveToRightSlide);
+  }
+
+  // In-slide prev arrow moves back to main slide
+  if (inSlidePrevArrow) {
+    inSlidePrevArrow.addEventListener("click", moveToMainSlide);
+  }
 });
